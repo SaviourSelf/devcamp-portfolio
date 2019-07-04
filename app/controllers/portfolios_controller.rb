@@ -11,6 +11,9 @@ class PortfoliosController < ApplicationController
         @portfolio_item = Portfolio.find(params[:id])
     end
 
+    def show
+    end
+
   # POST /blogs
   # POST /blogs.json
   def create
@@ -39,5 +42,9 @@ class PortfoliosController < ApplicationController
         format.json { render json: @portfolio_item.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
   end
 end
