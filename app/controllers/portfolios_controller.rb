@@ -11,7 +11,7 @@ class PortfoliosController < ApplicationController
         @portfolio_item = Portfolio.find(params[:id])
     end
 
-    # POST /blogs
+  # POST /blogs
   # POST /blogs.json
   def create
     @portfolio_item = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body))
